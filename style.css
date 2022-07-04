@@ -391,17 +391,25 @@ font-weight: 500;
                 .navigation{
                     left: -300px;
                 }
+                .navigation.active
+                {
+                    width: 60px;
+                    left: 0;
+                   
+                }
                 .main
                 {
-                    width: 100%;
+                    width: calc(100% - 60px);
                     left: 0;
                 }
                 .main.active{
-                    left: 300px;
+                    left: 60px;
+                  
                 }
                 .cardBox
                 {
                     grid-template-columns: repeat(2, 1fr);
+
                 }
                 .recentOrders
                 {
@@ -420,12 +428,13 @@ font-weight: 500;
                 .recentOrders
                 {
                     overflow-x: auto;
+                    width: 100%;
                 }
                 .status.progress{
                     white-space: nowrap;
                 }
             }
-            @media(max-width:698px){
+            @media(max-width:542px){
                 .cardBox{
                     grid-template-columns: repeat(1, 1fr);
                 }
@@ -440,6 +449,24 @@ font-weight: 500;
                     width: 100%;
                     left: -100%;
                     z-index: 1000;
+                }
+                .navigation.active{
+                    width: 60px;
+                    left: 0;
+                }
+                .toggle{
+                    z-index: 10001;
+                }
+                .recentOrders{
+                    min-width: 50%;
+                }
+            }
+        /*     @media(max-width:382px){
+                .navigation
+                {
+                    width: 100%;
+                    left: -100%;
+                    z-index: 1000;
             
                 }
                 .navigation.active{
@@ -449,4 +476,6 @@ font-weight: 500;
                 .toggle{
                     z-index: 10001;
                 }
-            }
+ 
+            } */
+            
